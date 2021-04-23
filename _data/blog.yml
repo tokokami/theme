@@ -1,0 +1,9 @@
+- title: Blog Pertama
+  deskripsi: not disable the functionality of the element. This attribute may be added or removed programmatically via scripting.
+  image: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+  url: /blog/blog-pertama
+
+- title: Blog Kedua
+  deskripsi: not disable the functionality of the element. This attribute may be added or removed programmatically via scripting.
+  image: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+  url: /blog/blog-kedua

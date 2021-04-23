@@ -1,1 +1,59 @@
-theme: jekyll-theme-minimal
+
+name: TokoKami
+
+description: Totokoan Terkini
+
+avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+
+footer-links:
+  dribbble:
+  email:
+  facebook:
+  flickr:
+  github: 
+  instagram:
+  linkedin:
+  pinterest:
+  rss: 
+  twitter: 
+  stackoverflow: 
+  youtube: 
+  googleplus: 
+
+disqus:
+
+google_analytics:
+
+url:
+
+baseurl: ""
+
+permalink: /:title
+
+version: v1.2.0
+
+kramdown:
+  input: GFM
+
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+sass:
+  style: :expanded
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+paginate: 4
+paginate_path: '/page-:num'
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

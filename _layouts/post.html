@@ -1,0 +1,276 @@
+---
+layout: default
+---
+	<style type="text/css">
+	/* style untuk link popup */
+	a.popup-link {
+		padding:17px 0;
+		text-align: center;
+		margin:7% auto;
+		position: relative;
+		width: 300px;
+		color: #fff;
+		text-decoration: none;
+		background-color: #FFBA00;
+		border-radius: 3px;
+		box-shadow: 0 5px 0px 0px #eea900;
+		display: block;
+	}
+	a.popup-link:hover {
+		background-color: #ff9900;
+		box-shadow: 0 3px 0px 0px #eea900;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+	}
+	/* end link popup*/
+
+	/*style untuk popup */	
+	#order {
+		visibility: hidden;
+		opacity: 0;
+		margin-top: -200px;
+	}
+	#order:target {
+		visibility:visible;
+		opacity: 1;
+		background-color: rgba(255,255,255,0.8);
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:0;
+		z-index: 99999999999;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+	}
+
+	@media (min-width: 768px){
+		.popup-container {
+			width:600px;
+		}
+	a.popup-close {
+		right:10px;
+        }
+	}
+	@media (max-width: 767px){
+		.popup-container {
+			width:100%;
+		}
+	a.popup-close {
+		right:10px;
+        }
+	}
+	@media (max-width: 600px){
+	a.popup-close {
+		right:10px!important;
+        }
+	}
+	.popup-container {
+		position: relative;
+		margin:7% auto;
+        margin-top: -1%;
+		color:#666;
+		border-radius: 3px;
+        padding: 10px 0;
+	}
+
+	a.popup-close {
+		position: absolute;
+		top:10px;
+		right:24px;
+		padding:10px 10px;
+		font-size: 20px;
+		text-decoration: none;
+		line-height: 1;
+		color:#000;
+	}
+
+	/* style untuk isi popup */
+
+
+	.popup-form {
+		margin:10px auto;
+	}
+		.popup-form h2 {
+			margin-bottom: 5px;
+			font-size: 37px;
+			text-transform: uppercase;
+		}
+		.popup-form .input-group {
+			margin:10px auto;
+		}
+			.popup-form .input-group input {
+				padding:17px;
+				text-align: center;
+				margin-bottom: 10px;
+				border-radius:3px;
+				font-size: 16px; 
+				display: block;
+				width: 100%;
+			}
+			.popup-form .input-group input:focus {
+				outline-color:#FB8833; 
+			}
+			.popup-form .input-group input[type="email"] {
+				border:0px;
+				position: relative;
+			}
+			.popup-form .input-group input[type="submit"] {
+				background-color: #FB8833;
+				color: #fff;
+				border: 0;
+				cursor: pointer;
+			}
+			.popup-form .input-group input[type="submit"]:focus {
+				box-shadow: inset 0 3px 7px 3px #ea7722;
+			}
+	/* end isi form */
+.productPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;
+    padding: 0 6px;
+}
+.image-produk {
+    width: 100%;
+    height: fit-content;
+}
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+	</style>
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+  <h3>{{ page.title }}</h3></div>
+<div class="content-produk">
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-text">
+<div class="image-produk">
+<img src="{{ page.image }}"/>
+<div class="productPhoto">
+            {% for image in page.img %}
+<img src="{{ image }}"/>
+          	{% endfor %}
+</div>
+</div>
+  <div class="post mdl-color-text--grey-700">
+    {{ content }}
+  </div></div>
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
+<div class='popup-wrapper' id='buyWhatsApp' style="overflow-x: hidden;">
+<div class='popup-container'>
+<div class='container-contact100'>
+<div class='wrap-contact100'>
+<h2 class='title-beli'>
+  <span class='data-form-title'>
+<i class='fab fa-whatsapp'></i> Order Produk via <b>WhatsApp</b></span>
+</h2>
+
+<!--=== HTML Form WhatsApp  ===-->
+<div class='data-form validate-form' id='whatsapp'>
+<!--=== HTML Pilihan Pembayaran ===-->
+<input class='tujuan' id='Admin' type='hidden'/>
+
+<!--=== HTML Table Form Pesanan ===-->
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Nama ===-->
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu..' type='text'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='alamat wajib mdl-textfield__input' placeholder='Alamat Lengkap..' type='text'></textarea>
+</label>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Nomor WhatsApp ===-->
+<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp..' type='number'/>
+</label>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Jumlah Item ===-->
+  <i class='fa fa-cart-plus'></i>
+<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
+</label>
+</div>
+<div class='gridWhatsApp'>
+<!--=== HTML Opsi Form Produk ===-->
+<label class='formWhatsApp'>
+<select class='mdl-button warna wajib' placeholder='Warna' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
+<optgroup label='Pilihan Warna'>
+            {% for warna in page.warna %}
+<option value='{{ warna }}'>{{ warna }}</option>
+            {% endfor %}
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button tali wajib' placeholder='Model' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
+<optgroup label='Pilihan Model'>
+            {% for tali in page.model %}
+<option value='{{ tali }}'>{{ tali }}</option>
+            {% endfor %}
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pengiriman</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pembayaran</option>
+<!--=== HTML Data Pembayaran ===-->
+<optgroup label='Pilih Pembayaran'>
+<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
+<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
+<option value='Scan QRIS'>Scan QRIS</option>
+</optgroup>
+</select>
+</label>
+</div>
+<div class='catatan'>
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Catatan ===-->
+  <i class="fa fa-comment-dots"></i>
+<input class='note wajib mdl-textfield__input' placeholder='Catatan (contoh; warna & Model)' type='text'/>
+</label>
+</div>
+</div>
+<div class='sendWhatsApp'>
+<div class='sendWAcolor'>
+<div class='sendWAbuttom'/>
+  <button type="button" class="mdl-button show-modal">Buy Now</button>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+<center>
+Pesanan Kamu Akan Dilanjutkan Ke Chat WhatsApp Seller Toko.</center>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content: space-evenly!important;padding: 8px 0!important;">
+      <button type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</button>
+      <button type="button" class="mdl-button close">Batal</button>
+    </div>
+  </dialog>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  {% include disqus.html %}
+</article>

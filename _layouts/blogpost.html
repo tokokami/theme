@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<style>
+.wrapper-masthead {display:none;}
+</style>
+
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ page.image }}); height: 280px;">
+</div>
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+  <h3>{{ page.title }}</h3>
+            </div>
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-text" style="width:100%!important">
+    {{ content }}
+  </div>
+  {% include disqus.html %}
+</article>

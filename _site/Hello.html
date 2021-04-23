@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>TokoKami – Judul Produk Kedua</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' type='text/javascript'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="TokoKami - Totokoan Terkini" href="/feed.xml" />
+
+    <!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      z-index: 900;
+    }
+    #u-back {
+      position: fixed;
+      display: block;
+      right: 0;
+      top: 60px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      z-index: 900;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">TokoKami</span>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">About</li>
+            <li class="mdl-menu__item">Contact</li>
+            <li class="mdl-menu__item">Legal information</li>
+          </ul>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" class="demo-avatar">
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="/blog"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+          <a class="mdl-navigation__link" href="/promo"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
+          <a class="mdl-navigation__link" href="/pengiriman"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+          <a class="mdl-navigation__link" href="/social"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-navigation__link" href="/bantuan"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+<div class="mdl-grid demo-content">
+    
+      <div class="archive-group">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button></div>
+
+    
+      	<style type="text/css">
+	/* style untuk link popup */
+	a.popup-link {
+		padding:17px 0;
+		text-align: center;
+		margin:7% auto;
+		position: relative;
+		width: 300px;
+		color: #fff;
+		text-decoration: none;
+		background-color: #FFBA00;
+		border-radius: 3px;
+		box-shadow: 0 5px 0px 0px #eea900;
+		display: block;
+	}
+	a.popup-link:hover {
+		background-color: #ff9900;
+		box-shadow: 0 3px 0px 0px #eea900;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+	}
+	/* end link popup*/
+
+	/*style untuk popup */	
+	#order {
+		visibility: hidden;
+		opacity: 0;
+		margin-top: -200px;
+	}
+	#order:target {
+		visibility:visible;
+		opacity: 1;
+		background-color: rgba(255,255,255,0.8);
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:0;
+		z-index: 99999999999;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 1s;
+	}
+
+	@media (min-width: 768px){
+		.popup-container {
+			width:600px;
+		}
+	a.popup-close {
+		right:10px;
+        }
+	}
+	@media (max-width: 767px){
+		.popup-container {
+			width:100%;
+		}
+	a.popup-close {
+		right:10px;
+        }
+	}
+	@media (max-width: 600px){
+	a.popup-close {
+		right:10px!important;
+        }
+	}
+	.popup-container {
+		position: relative;
+		margin:7% auto;
+        margin-top: -1%;
+		color:#666;
+		border-radius: 3px;
+        padding: 10px 0;
+	}
+
+	a.popup-close {
+		position: absolute;
+		top:10px;
+		right:24px;
+		padding:10px 10px;
+		font-size: 20px;
+		text-decoration: none;
+		line-height: 1;
+		color:#000;
+	}
+
+	/* style untuk isi popup */
+
+
+	.popup-form {
+		margin:10px auto;
+	}
+		.popup-form h2 {
+			margin-bottom: 5px;
+			font-size: 37px;
+			text-transform: uppercase;
+		}
+		.popup-form .input-group {
+			margin:10px auto;
+		}
+			.popup-form .input-group input {
+				padding:17px;
+				text-align: center;
+				margin-bottom: 10px;
+				border-radius:3px;
+				font-size: 16px; 
+				display: block;
+				width: 100%;
+			}
+			.popup-form .input-group input:focus {
+				outline-color:#FB8833; 
+			}
+			.popup-form .input-group input[type="email"] {
+				border:0px;
+				position: relative;
+			}
+			.popup-form .input-group input[type="submit"] {
+				background-color: #FB8833;
+				color: #fff;
+				border: 0;
+				cursor: pointer;
+			}
+			.popup-form .input-group input[type="submit"]:focus {
+				box-shadow: inset 0 3px 7px 3px #ea7722;
+			}
+	/* end isi form */
+.productPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;
+    padding: 0 6px;
+}
+.image-produk {
+    width: 100%;
+    height: fit-content;
+}
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+	</style>
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+  <h3>Judul Produk Kedua</h3></div>
+<div class="content-produk">
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-text">
+<div class="image-produk">
+<img src="https://www.jakartanotebook.com/images/products/86/1020/46256/3/anhui-masker-anti-polusi-virus-corona-kn95-1-pcs-sy9600-white-28.jpg"/>
+<div class="productPhoto">
+            
+</div>
+</div>
+  <div class="post mdl-color-text--grey-700">
+    <p>Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).</p>
+
+<p>The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the <a href="https://github.com/barryclark/jekyll-now">Jekyll Now repository</a> on GitHub.</p>
+
+  </div></div>
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
+<div class='popup-wrapper' id='buyWhatsApp' style="overflow-x: hidden;">
+<div class='popup-container'>
+<div class='container-contact100'>
+<div class='wrap-contact100'>
+<h2 class='title-beli'>
+  <span class='data-form-title'>
+<i class='fab fa-whatsapp'></i> Order Produk via <b>WhatsApp</b></span>
+</h2>
+
+<!--=== HTML Form WhatsApp  ===-->
+<div class='data-form validate-form' id='whatsapp'>
+<!--=== HTML Pilihan Pembayaran ===-->
+<input class='tujuan' id='Admin' type='hidden'/>
+
+<!--=== HTML Table Form Pesanan ===-->
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Nama ===-->
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu..' type='text'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='alamat wajib mdl-textfield__input' placeholder='Alamat Lengkap..' type='text'></textarea>
+</label>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Nomor WhatsApp ===-->
+<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp..' type='number'/>
+</label>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Jumlah Item ===-->
+  <i class='fa fa-cart-plus'></i>
+<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
+</label>
+</div>
+<div class='gridWhatsApp'>
+<!--=== HTML Opsi Form Produk ===-->
+<label class='formWhatsApp'>
+<select class='mdl-button warna wajib' placeholder='Warna' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
+<optgroup label='Pilihan Warna'>
+            
+<option value='Marun'>Marun</option>
+            
+<option value='Hitam'>Hitam</option>
+            
+<option value='Coksu'>Coksu</option>
+            
+<option value='Hitam'>Hitam</option>
+            
+<option value='Navi'>Navi</option>
+            
+<option value='Pink'>Pink</option>
+            
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button tali wajib' placeholder='Model' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
+<optgroup label='Pilihan Model'>
+            
+<option value='Headloop'>Headloop</option>
+            
+<option value='Earloop'>Earloop</option>
+            
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pengiriman</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
+<label class='formWhatsApp'>
+<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 250px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pembayaran</option>
+<!--=== HTML Data Pembayaran ===-->
+<optgroup label='Pilih Pembayaran'>
+<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
+<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
+<option value='Scan QRIS'>Scan QRIS</option>
+</optgroup>
+</select>
+</label>
+</div>
+<div class='catatan'>
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Catatan ===-->
+  <i class="fa fa-comment-dots"></i>
+<input class='note wajib mdl-textfield__input' placeholder='Catatan (contoh; warna & Model)' type='text'/>
+</label>
+</div>
+</div>
+<div class='sendWhatsApp'>
+<div class='sendWAcolor'>
+<div class='sendWAbuttom'/>
+  <button type="button" class="mdl-button show-modal">Buy Now</button>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+<center>
+Pesanan Kamu Akan Dilanjutkan Ke Chat WhatsApp Seller Toko.</center>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content: space-evenly!important;padding: 8px 0!important;">
+      <button type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</button>
+      <button type="button" class="mdl-button close">Batal</button>
+    </div>
+  </dialog>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  
+</article>
+
+  
+</div>
+      </main>
+    </div>
+    
+
+    <script src="/js/script.js" type="text/javascript"></script>
+  
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+  </body>
+</html>
