@@ -69,6 +69,10 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">TokoKami</span>
           <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons">
+shopping_cart
+</span>
+          </button>
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
           </button>
@@ -247,8 +251,8 @@ img {
 }
 	</style>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-  <h3>Judul Produk Keempat</h3></div>
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+  <h2>Judul Produk Keempat</h2></div>
 <div class="content-produk">
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-text">
 <div class="image-produk">
@@ -256,28 +260,117 @@ img {
 <div class="productPhoto">
             
 </div>
-</div>
-  <div class="post mdl-color-text--grey-700">
+</div></div>
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+      <a href="#deskripsi-panel" class="mdl-tabs__tab is-active">Deskripsi Produk</a>
+      <a href="#order-panel" class="mdl-tabs__tab">Order Produk</a>
+  </div>
+
+  <div class="mdl-tabs__panel is-active" id="deskripsi-panel">
+<div class="post-tab mdl-color-text--grey-700">
     <p>Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).</p>
 
 <p>The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the <a href="https://github.com/barryclark/jekyll-now">Jekyll Now repository</a> on GitHub.</p>
 
-  </div></div>
-  <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
-<div class='popup-wrapper' id='buyWhatsApp' style="overflow-x: hidden;">
-<div class='popup-container'>
-<div class='container-contact100'>
+</div>
+  </div>
+  <div class="mdl-tabs__panel" id="order-panel">
 <div class='wrap-contact100'>
-<h2 class='title-beli'>
-  <span class='data-form-title'>
-<i class='fab fa-whatsapp'></i> Order Produk via <b>WhatsApp</b></span>
-</h2>
-
 <!--=== HTML Form WhatsApp  ===-->
 <div class='data-form validate-form' id='whatsapp'>
 <!--=== HTML Pilihan Pembayaran ===-->
 <input class='tujuan' id='Admin' type='hidden'/>
-
+<label class='mdl-textfield mdl-js-textfield'>
+<!--=== From Jumlah Item ===-->
+  <i class='fa fa-cart-plus'></i>
+<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
+</label>
+<!--=== HTML Opsi Form Produk ===-->
+<div class="wrn">Pilih Warna:</div>
+<div class="post-order mdl-color-text--grey-700">
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Marun">
+  <input type="radio" id="Marun" class="mdl-radio__button warna" value="Marun" name="options">
+  <span class="mdl-radio__label">Marun</span>
+</label></div>
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Hitam">
+  <input type="radio" id="Hitam" class="mdl-radio__button warna" value="Hitam" name="options">
+  <span class="mdl-radio__label">Hitam</span>
+</label></div>
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Coksu">
+  <input type="radio" id="Coksu" class="mdl-radio__button warna" value="Coksu" name="options">
+  <span class="mdl-radio__label">Coksu</span>
+</label></div>
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Hitam">
+  <input type="radio" id="Hitam" class="mdl-radio__button warna" value="Hitam" name="options">
+  <span class="mdl-radio__label">Hitam</span>
+</label></div>
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Navi">
+  <input type="radio" id="Navi" class="mdl-radio__button warna" value="Navi" name="options">
+  <span class="mdl-radio__label">Navi</span>
+</label></div>
+            
+<div class="rd" style="width: 90px;">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Pink">
+  <input type="radio" id="Pink" class="mdl-radio__button warna" value="Pink" name="options">
+  <span class="mdl-radio__label">Pink</span>
+</label></div>
+            
+  </div>
+<div class="wrn" style="margin-top:10px;">Model Tali:</div>
+<div class="post-pick">
+<label class='formWhatsApp'>
+<select class='mdl-button tali wajib' placeholder='Model' style="border:none;background: white;width:100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
+<optgroup label='Pilih Model Tali'>
+            
+<option value='Headloop'>Headloop</option>
+            
+<option value='Earloop'>Earloop</option>
+            
+</optgroup>
+</select>
+</label>
+<div class="wrn" style="margin-top:10px;">Pengiriman:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width:100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pengiriman</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
+<div class="wrn" style="margin-top:10px;">Pembayaran:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pembayaran</option>
+<!--=== HTML Data Pembayaran ===-->
+<optgroup label='Pilih Pembayaran'>
+<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
+<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
+<option value='Scan QRIS'>Scan QRIS</option>
+</optgroup>
+</select>
+</label>
+</div>
+  <button type="button" class="mdl-button show-modal">Buy Now</button>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+<small>Lengkapi Data Berikut:</small>
 <!--=== HTML Table Form Pesanan ===-->
 <div class='gridWhatsApp'>
 <label class='mdl-textfield mdl-js-textfield'>
@@ -292,102 +385,19 @@ img {
 <!--=== From Nomor WhatsApp ===-->
 <input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp..' type='number'/>
 </label>
-<label class='mdl-textfield mdl-js-textfield'>
-<!--=== From Jumlah Item ===-->
-  <i class='fa fa-cart-plus'></i>
-<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
-</label>
 </div>
-<div class='gridWhatsApp'>
-<!--=== HTML Opsi Form Produk ===-->
-<label class='formWhatsApp'>
-<select class='mdl-button warna wajib' placeholder='Warna' style="border:none;background: white;width: 250px;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
-<optgroup label='Pilihan Warna'>
-            
-<option value='Marun'>Marun</option>
-            
-<option value='Hitam'>Hitam</option>
-            
-<option value='Coksu'>Coksu</option>
-            
-<option value='Hitam'>Hitam</option>
-            
-<option value='Navi'>Navi</option>
-            
-<option value='Pink'>Pink</option>
-            
-</optgroup>
-</select>
-</label>
-<label class='formWhatsApp'>
-<select class='mdl-button tali wajib' placeholder='Model' style="border:none;background: white;width: 250px;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
-<optgroup label='Pilihan Model'>
-            
-<option value='Headloop'>Headloop</option>
-            
-<option value='Earloop'>Earloop</option>
-            
-</optgroup>
-</select>
-</label>
-<label class='formWhatsApp'>
-<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width: 250px;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pengiriman</option>
-<optgroup label='Kirim Pakai?'>
-<option value='J%26T Express'>J&T Express</option>
-<option value='JNE Express'>JNE Express</option>
-<option value='*Go Send'>*Go Send (Kota Tasik)</option>
-<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
-</optgroup>
-</select>
-</label>
-<label class='formWhatsApp'>
-<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 250px;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pembayaran</option>
-<!--=== HTML Data Pembayaran ===-->
-<optgroup label='Pilih Pembayaran'>
-<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
-<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
-<option value='Scan QRIS'>Scan QRIS</option>
-</optgroup>
-</select>
-</label>
-</div>
-<div class='catatan'>
-<div class='gridWhatsApp'>
-<label class='mdl-textfield mdl-js-textfield'>
-<!--=== From Catatan ===-->
-  <i class="fa fa-comment-dots"></i>
-<input class='note wajib mdl-textfield__input' placeholder='Catatan (contoh; warna & Model)' type='text'/>
-</label>
-</div>
-</div>
-<div class='sendWhatsApp'>
-<div class='sendWAcolor'>
-<div class='sendWAbuttom'/>
-  <button type="button" class="mdl-button show-modal">Buy Now</button>
-  <dialog class="mdl-dialog">
-    <div class="mdl-dialog__content">
-<center>
-Pesanan Kamu Akan Dilanjutkan Ke Chat WhatsApp Seller Toko.</center>
     </div>
     <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content: space-evenly!important;padding: 8px 0!important;">
-      <button type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</button>
+      <a type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</a>
       <button type="button" class="mdl-button close">Batal</button>
     </div>
   </dialog>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-  
 </article>
 
   
@@ -399,8 +409,6 @@ Pesanan Kamu Akan Dilanjutkan Ke Chat WhatsApp Seller Toko.</center>
   
 
     <script src="/js/script.js" type="text/javascript"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="/slick/slick.min.js"></script>
   <script type="text/javascript">
 

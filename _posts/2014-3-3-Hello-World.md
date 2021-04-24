@@ -15,7 +15,7 @@ warna:
 - Marun
 - Hitam
 - Coksu
-- Hitam
+- Mustard
 - Navi
 - Pink
 model:
@@ -23,12 +23,10 @@ model:
 - Earloop
 ---
 
-<h2  style="font-size: revert;padding-bottom: 10px;">Detail Produk:</h2>
+<h3 style="font-size: revert;padding-bottom: 10px;">Detail Produk:</h3>
 <ul>
 <li>Deskripsi 1</li>
 <li>Deskripsi 2</li>
 <li>Deskripsi 3</li>
 <li> </li>
 </ul>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mauris metus, imperdiet in viverra ut, sagittis congue ex. Cras mi nunc, rutrum id lacinia sed, varius a eros. Nam neque lorem, pulvinar sit amet sapien non, vestibulum sodales elit. Integer aliquam lectus nec risus luctus, vitae consequat orci auctor. Vivamus condimentum posuere urna at auctor. 

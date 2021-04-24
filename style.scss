@@ -269,7 +269,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     line-height: 18px;
     overflow: hidden;
     padding: 16px;
-    width: 35%;
+    width: 40%;
 
     @include mobile {
     width: 100%;}
@@ -328,7 +328,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     flex-wrap: wrap;}
 }
 .gridWhatsApp {
-    width: min-content;
+    width: auto;
 
     @include mobile {
     margin: auto;}
@@ -349,6 +349,10 @@ _:-ms-input-placeholder, :root .demo-graph {
     margin: 0;
     padding: 0 5px;
 }
+.mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {
+    display: block;
+    min-height: 260px;
+}
 .selik {
     width: 100%;
     margin: auto;
@@ -364,6 +368,35 @@ _:-ms-input-placeholder, :root .demo-graph {
     width: -webkit-fill-available;
     border-radius: 5px!important;
         }
+.tombol-beli {
+    margin-top: 25px;
+}
+.post-tab {
+    margin-top: 15px;
+}
+.post-order {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-gap: 15px;
+    width: 100%;
+    background: #0000001f;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+
+    @include mobile {
+    width: 100%!important;}
+}
+.post-pick {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
