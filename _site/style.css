@@ -442,6 +442,12 @@ _:-ms-input-placeholder, :root .demo-graph {
   width: min-content;
 }
 
+@media screen and (max-width: 640px) {
+  .gridWhatsApp {
+    margin: auto;
+  }
+}
+
 .mdl-dialog__content {
   padding: 0;
   color: rgba(0, 0, 0, 0.54);
@@ -458,6 +464,25 @@ _:-ms-input-placeholder, :root .demo-graph {
   max-width: 100%;
   margin: 0;
   padding: 0 5px;
+}
+
+.selik {
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  height: 250px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  .selik {
+    height: 150px;
+  }
+}
+
+.selik img {
+  width: -webkit-fill-available;
+  border-radius: 5px !important;
 }
 
 .highlight {

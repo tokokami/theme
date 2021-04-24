@@ -329,6 +329,9 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .gridWhatsApp {
     width: min-content;
+
+    @include mobile {
+    margin: auto;}
 }
 .mdl-dialog__content {
     padding: 0;
@@ -346,6 +349,21 @@ _:-ms-input-placeholder, :root .demo-graph {
     margin: 0;
     padding: 0 5px;
 }
+.selik {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    height: 250px;
+    overflow: hidden;
+
+    @include mobile {
+    height: 150px;}
+        }
+ 
+.selik img {
+    width: -webkit-fill-available;
+    border-radius: 5px!important;
+        }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
