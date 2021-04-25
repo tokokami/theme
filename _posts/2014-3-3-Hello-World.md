@@ -10,7 +10,8 @@ img:
 - https://www.jakartanotebook.com/images/products/86/1020/46256/3/anhui-masker-anti-polusi-virus-corona-kn95-1-pcs-sy9600-white-28.jpg
 price: '20,000'
 star: star
-rate: 5 / 5
+rate: 5.0
+stok: 20
 warna:
 - Marun
 - Hitam

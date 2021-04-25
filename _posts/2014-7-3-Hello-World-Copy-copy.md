@@ -5,7 +5,8 @@ title: Judul Produk Kelima
 image: https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef
 price: '20,000'
 star: star
-rate: 5 / 5
+rate: 5.0
+stok: 20
 warna:
 - Marun
 - Hitam
