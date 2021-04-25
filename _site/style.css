@@ -448,6 +448,10 @@ _:-ms-input-placeholder, :root .demo-graph {
   }
 }
 
+.mdl-dialog {
+  border-radius: 5px;
+}
+
 .mdl-dialog__content {
   padding: 0;
   color: rgba(0, 0, 0, 0.54);
@@ -459,11 +463,12 @@ _:-ms-input-placeholder, :root .demo-graph {
   text-align: center;
   display: inline-block;
   box-sizing: border-box;
-  width: 50px;
-  height: 45px;
+  width: 35px;
+  height: 25px;
   max-width: 100%;
   margin: 0;
-  padding: 0 5px;
+  padding: 5px;
+  overflow: hidden;
 }
 
 .mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {

@@ -28,7 +28,7 @@ function WhatsApp() {
 				return false;
             } else if ($('#whatsapp .qty').val() == '') { // Cek jumlah
                 ph = $('#whatsapp .qty').attr('placeholder');
-                alert('Silahkan tulis ' + ph);
+                alert('Jumlah Item Yang Di Beli Tidak Bisa ' + ph + ' pcs');
                 $('#whatsapp .qty').focus();
 				return false;
             } else if ($('#whatsapp .bayar').val() == '') { // Cek bayar

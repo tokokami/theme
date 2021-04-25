@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Totokoan Terkini">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>TokoKami – Judul Produk Ketoga</title>
+    <title>TokoKami – Judul Produk Ketiga</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -255,7 +255,7 @@ img {
 	</style>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-  <h2>Judul Produk Ketoga</h2></div>
+  <h2>Judul Produk Ketiga</h2></div>
 <div class="content-produk">
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-text">
 <div class="image-produk">
@@ -289,7 +289,7 @@ img {
 <!--=== From Jumlah Item ===-->
 <label class='mdl-textfield mdl-js-textfield'>
  <i class='fa fa-cart-plus'></i>
-<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
+<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/> pcs
 </label>
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
@@ -378,17 +378,17 @@ img {
 <small>Lengkapi Data Berikut:</small>
 <!--=== HTML Table Form Pesanan ===-->
 <div class='gridWhatsApp'>
-<label class='mdl-textfield mdl-js-textfield'>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nama ===-->
-<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu..' type='text'/>
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu' type='text'/>
 </label>
 <label class='item'>
 <!--=== From Alamat ===-->
-<textarea class='alamat wajib mdl-textfield__input' placeholder='Alamat Lengkap..' type='text'></textarea>
+<textarea class='alamat wajib mdl-textfield__input mdl-textfield--floating-label' placeholder='Alamat Lengkap' type='text'></textarea>
 </label>
-<label class='mdl-textfield mdl-js-textfield'>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nomor WhatsApp ===-->
-<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp..' type='number'/>
+<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
 </label>
 </div>
     </div>
@@ -404,6 +404,15 @@ img {
   </div>
 </div>
 </article>
+<script>
+function hanyaAngka(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+    return false;
+    return true;
+}
+</script>
 
   
 </div>
