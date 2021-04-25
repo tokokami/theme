@@ -8,7 +8,27 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
+    {% if page.layout == "blogpost" %}
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button>
+{% endif %}
+    {% if page.layout == "post" %}
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button>
+{% endif %}
+    {% if page.layout == "page" %}
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button>
+{% endif %}
+  {% if page.layout == "default" %}
           <span class="mdl-layout-title">{{ site.name }}</span>
+{% endif %}
+  {% if page.layout == "blogpage" %}
+          <span class="mdl-layout-title">{{ site.name }}</span>
+{% endif %}
           <div class="mdl-layout-spacer"></div>
 <a href="{{ site.baseurl }}/keranjang">
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">
@@ -33,18 +53,6 @@ shopping_cart
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
 <div class="mdl-grid demo-content">
-    {% if page.layout == "post" %}
-      <div class="archive-group">
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button></div>
-{% endif %}
-    {% if page.layout == "blogpost" %}
-      <div class="archive-group">
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button></div>
-{% endif %}
   {% if page.layout == "default" %}
     {% include slick-slide.html %}
   {% endif %}

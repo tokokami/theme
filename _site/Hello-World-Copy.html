@@ -67,7 +67,15 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">TokoKami</span>
+    
+    
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button>
+
+    
+  
+  
           <div class="mdl-layout-spacer"></div>
 <a href="/keranjang">
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">
@@ -102,13 +110,6 @@ shopping_cart
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
 <div class="mdl-grid demo-content">
-    
-      <div class="archive-group">
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button></div>
-
-    
   
       	<style type="text/css">
 	/* style untuk link popup */
@@ -253,6 +254,30 @@ img {
     border-radius: 5px;
 }
 	</style>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "url": "https://tokokami.github.io/Hello-World-Copy",
+    "numberOfItems": "",
+    "itemListElement": [
+        {
+            "@type": "Product",
+            "image": "https://www.jakartanotebook.com/images/products/86/1020/46256/3/anhui-masker-anti-polusi-virus-corona-kn95-1-pcs-sy9600-white-28.jpg",
+            "url": "https://tokokami.github.io/Hello-World-Copy",
+            "name": "Judul Produk Keempat",
+            "offers": {
+                "@type": "Offer",
+                "price": "Rp.20,000"
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Judul Produk Keempat"
+        }
+    ]
+}
+</script>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
   <h2>Judul Produk Keempat</h2></div>
@@ -289,7 +314,7 @@ img {
 <!--=== From Jumlah Item ===-->
 <label class='mdl-textfield mdl-js-textfield'>
  <i class='fa fa-cart-plus'></i>
-<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/> pcs
+<input type='number' value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/>
 </label>
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
@@ -388,7 +413,7 @@ img {
 </label>
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nomor WhatsApp ===-->
-<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
+<input type='number' class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
 </label>
 </div>
     </div>

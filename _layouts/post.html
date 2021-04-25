@@ -144,6 +144,30 @@ img {
     border-radius: 5px;
 }
 	</style>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "url": "{{ site.url }}{{ page.url }}",
+    "numberOfItems": "{{ page.stok }}",
+    "itemListElement": [
+        {
+            "@type": "Product",
+            "image": "{{ page.image }}",
+            "url": "{{ site.url }}{{ page.url }}",
+            "name": "{{ page.title }}",
+            "offers": {
+                "@type": "Offer",
+                "price": "Rp.{{ page.price }}"
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "{{ page.title }}"
+        }
+    ]
+}
+</script>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
   <h2>{{ page.title }}</h2></div>
@@ -179,7 +203,7 @@ img {
 <!--=== From Jumlah Item ===-->
 <label class='mdl-textfield mdl-js-textfield'>
  <i class='fa fa-cart-plus'></i>
-<input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/> pcs
+<input type='number' value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/>
 </label>
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
@@ -246,7 +270,7 @@ img {
 </label>
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nomor WhatsApp ===-->
-<input class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
+<input type='number' class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
 </label>
 </div>
     </div>

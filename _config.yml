@@ -24,7 +24,7 @@ disqus:
 
 google_analytics:
 
-url: https://tokokami.github.io
+url: "https://tokokami.github.io"
 
 baseurl: ""
 
