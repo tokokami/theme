@@ -69,10 +69,11 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">TokoKami</span>
           <div class="mdl-layout-spacer"></div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons">
+<a href="/keranjang">
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">
 shopping_cart
 </span>
-          </button>
+          </button></a>
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
           </button>
@@ -87,15 +88,17 @@ shopping_cart
         <header class="demo-drawer-header">
           <img src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" class="demo-avatar">
         </header>
+    
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
           <a class="mdl-navigation__link" href="/blog"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
           <a class="mdl-navigation__link" href="/promo"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
-          <a class="mdl-navigation__link" href="/pengiriman"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+          <a class="mdl-navigation__link" href="/keranjang"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
           <a class="mdl-navigation__link" href="/social"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="/bantuan"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
+
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
 <div class="mdl-grid demo-content">
@@ -282,9 +285,10 @@ img {
 <div class='data-form validate-form' id='whatsapp'>
 <!--=== HTML Pilihan Pembayaran ===-->
 <input class='tujuan' id='Admin' type='hidden'/>
-<label class='mdl-textfield mdl-js-textfield'>
+
 <!--=== From Jumlah Item ===-->
-  <i class='fa fa-cart-plus'></i>
+<label class='mdl-textfield mdl-js-textfield'>
+ <i class='fa fa-cart-plus'></i>
 <input value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='Quatity' type='number' style="border:none;background: white;"/>
 </label>
 <!--=== HTML Opsi Form Produk ===-->
@@ -367,7 +371,8 @@ img {
 </select>
 </label>
 </div>
-  <button type="button" class="mdl-button show-modal">Buy Now</button>
+<div class="tombol-beli">
+  <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal">Beli</button></div>
   <dialog class="mdl-dialog">
     <div class="mdl-dialog__content">
 <small>Lengkapi Data Berikut:</small>

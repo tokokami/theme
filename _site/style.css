@@ -492,6 +492,8 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 .tombol-beli {
   margin-top: 25px;
+  margin-right: 10px;
+  float: right;
 }
 
 .post-tab {
