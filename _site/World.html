@@ -189,11 +189,15 @@
 			}
 	/* end isi form */
 .productPhoto {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     position: relative;
     padding: 0 6px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 25%;
+    justify-content: space-evenly;
 }
 .image-produk {
     width: 100%;
@@ -202,6 +206,9 @@
 img {
     width: 100%;
     border-radius: 5px;
+}
+.posting-img {
+    display: flex;
 }
 	</style>
 <script type="application/ld+json">
@@ -221,8 +228,8 @@ img {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "IDR",
-    "highPrice": "20,000",
-    "lowPrice": "15,000",
+    "highPrice": "20.000",
+    "lowPrice": "15.000",
     "offerCount": "20",
     "offers": [
       {
@@ -293,12 +300,12 @@ shopping_cart
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
   <h2>Judul Produk Ketiga</h2></div>
 <div class="content-produk">
-  <div class="post mdl-color-text--grey-700 mdl-card__supporting-text">
-<div class="image-produk">
-<img src="https://awsimages.detik.net.id/visual/2020/09/15/ilustrasi-masker-scuba-ist.png?w=650"/>
+  <div class="post mdl-color-text--grey-700 mdl-card__supporting-text posting-img">
 <div class="productPhoto">
             
 </div>
+<div class="image-produk">
+<img src="https://awsimages.detik.net.id/visual/2020/09/15/ilustrasi-masker-scuba-ist.png?w=650"/>
 </div></div>
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -382,30 +389,6 @@ shopping_cart
 </optgroup>
 </select>
 </label>
-<div class="wrn" style="margin-top:10px;">Pengiriman:</div>
-<label class='formWhatsApp'>
-<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width:100%;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pengiriman</option>
-<optgroup label='Kirim Pakai?'>
-<option value='J%26T Express'>J&T Express</option>
-<option value='JNE Express'>JNE Express</option>
-<option value='*Go Send'>*Go Send (Kota Tasik)</option>
-<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
-</optgroup>
-</select>
-</label>
-<div class="wrn" style="margin-top:10px;">Pembayaran:</div>
-<label class='formWhatsApp'>
-<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 100%;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pembayaran</option>
-<!--=== HTML Data Pembayaran ===-->
-<optgroup label='Pilih Pembayaran'>
-<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
-<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
-<option value='Scan QRIS'>Scan QRIS</option>
-</optgroup>
-</select>
-</label>
 </div>
 <div class="tombol-beli">
   <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal">Beli</button></div>
@@ -425,6 +408,30 @@ shopping_cart
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nomor WhatsApp ===-->
 <input type='number' class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
+</label>
+<div class="wrn" style="margin-top:10px;">Pengiriman:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width:100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
+<div class="wrn" style="margin-top:10px;">Pembayaran:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
+<!--=== HTML Data Pembayaran ===-->
+<optgroup label='Pilih Pembayaran'>
+<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
+<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
+<option value='Scan QRIS'>Scan QRIS</option>
+</optgroup>
+</select>
 </label>
 </div>
     </div>

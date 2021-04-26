@@ -194,11 +194,15 @@
 			}
 	/* end isi form */
 .productPhoto {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     position: relative;
     padding: 0 6px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 25%;
+    justify-content: space-evenly;
 }
 .image-produk {
     width: 100%;
@@ -207,6 +211,9 @@
 img {
     width: 100%;
     border-radius: 5px;
+}
+.posting-img {
+    display: flex;
 }
 	</style>
 <script type="application/ld+json">
