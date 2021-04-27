@@ -450,6 +450,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 .mdl-dialog {
   border-radius: 5px;
+  width: max-content;
 }
 
 .mdl-dialog__content {
