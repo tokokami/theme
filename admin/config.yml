@@ -1,20 +1,86 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (master by default)
 
-media_folder: "img/uploads" # Folder where user uploaded files should go
+media_folder: source/images/uploads
+public_folder: /images/uploads
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+#publish_mode: editorial_workflow #optional, enables publishing workflow
+
+collections:
+  #yaml middleman data example
+  - name: product
+    label: Product
+    format: yml
+    extension: yml
+    folder: data/products/
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Image, name: image, widget: image, required: true}
+
+      - {label: Weight, name: weight, widget: number}
+      - {label: Price, name: price, widget: number}
+      - {label: Body, name: body, widget: markdown}
+
+#markdown middleman blog example
+  - name: blog
+    label: Blog
+    folder: source/posts/
+    extension: .html.md
+    format: frontmatter
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Description, name: description, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Body, name: body, widget: markdown}
+
+  - name: pages
+    label: Pages
+    files:
+      - file: "data/pages/home.yml"
+        label: Homepage
+        name: home
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+          - label: Story
+            name: story
+            widget: markdown
+
+  - name: settings
+    label: Settings
+    files:
+      - file: data/settings/navigation.yml
+        label: Navigation
+        name: navigation
+        fields:
+          - label: Navigation
+            name: nav_items
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Path, name: path, widget: string}
+      - file: data/settings/units.yml
+        label: Units
+        name: units
+        fields:
+          - label: Currency
+            name: currency
+            widget: select
+            options: ['€', '$', 'Rp.']
+            default: 'Rp.'
+
+          - label: Weight
+            name: weight
+            widget: select
+            options: ['kg', ' st', ' lb']
+            default: 'kg'
