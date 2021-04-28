@@ -1,17 +1,17 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (master by default)
+  branch: main 
 
-media_folder: "images/uploads" # Folder where user uploaded files should go
+media_folder: "images/uploads" 
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post Product" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
+collections: 
+  - name: "post" 
+    label: "Post Product" 
+    folder: "_posts" 
+    sort: "date:desc" 
+    create: true 
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
+    fields: 
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Categories", name: "tags", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string", tagname: "h1", required: true}
@@ -26,5 +26,30 @@ collections: # A list of collections the CMS should be able to edit
       - {label: RC, name: rC, widget: number, required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true}
 
-    meta: # Meta data fields. Just like fields, but without any preview element
+    meta: 
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
+  - name: "blogpost" 
+    label: "Blog Post" 
+    folder: "blog"
+    format: md
+    extension: md
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blogpost"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", required: true}
+      - {label: Image, name: image, widget: image, required: true}
+
+  - name: "blog" 
+    label: "Blog Data" 
+    folder: "_data"
+    format: yml
+    extension: yml
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true} 
+      - {label: Deskripsi, name: deskripsi, widget: string, required: true} 
+      - {label: Thumbnail, name: image, widget: image, required: true}
+      - {label: URL, name: url, widget: string, required: true} 
