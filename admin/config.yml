@@ -38,16 +38,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blogpost"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1", required: true}
       - {label: Image, name: image, widget: image, required: true}
-
-  - name: "blog" 
-    label: "Blog Data" 
-    folder: "_data"
-    format: yml
-    extension: yml
-    create: true
-    slug: '{{title}}'
-    fields:
-      - {label: Title, name: title, widget: string, required: true} 
-      - {label: Deskripsi, name: deskripsi, widget: string, required: true} 
-      - {label: Thumbnail, name: image, widget: image, required: true}
-      - {label: URL, name: url, widget: string, required: true} 
+      - {label: "Body", name: "body", widget: "markdown", required: true}
