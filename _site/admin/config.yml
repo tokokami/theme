@@ -40,19 +40,3 @@ collections:
       - {label: Image, name: image, widget: image, required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true}
 
-    - name: "blog"
-      label: "Blog Data"
-      files:
-       - file: _data/blog.yml
-         label: Blog Data
-         name: blog
-         fields:
-          - label: Data
-            name: blog
-            widget: "list"
-            fields:
-                 - { label: Name, name: title, widget: string, required: true }
-                 - { label: Deskripsi, name: deskripsi, widget: string, required: true }
-                 - { label: Image, name: image, widget: image, required: true}
-                 - { label: Link, name: url, widget: string, required: true }
-
