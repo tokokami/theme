@@ -32,8 +32,6 @@ collections:
   - name: "blogpost" 
     label: "Blog Post" 
     folder: "blog"
-    format: md
-    extension: md
     create: true
     slug: '{{title}}'
     fields:
