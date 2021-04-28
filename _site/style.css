@@ -534,6 +534,68 @@ _:-ms-input-placeholder, :root .demo-graph {
   align-items: stretch;
 }
 
+.menu-jumlah-produk {
+  display: table;
+  width: 100%;
+}
+
+.title-jumlah {
+  display: table-cell;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.cell-jumlah-produk {
+  display: table-cell;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.jumlah-produk {
+  display: table;
+  width: 100px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: none;
+  height: 25px;
+}
+
+.jumlah-produk button {
+  display: table-cell;
+  width: 25px;
+  background-color: #e5e5e5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 18px;
+  outline: 0;
+  height: 25px;
+  border: 0;
+}
+
+.jumlah-produk button.min {
+  border-radius: 50%;
+}
+
+.input-jumlah {
+  display: table-cell;
+  width: 70px;
+  border: 0;
+}
+
+.jumlah-produk input {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.jumlah-produk button.plus {
+  border-radius: 50%;
+}
+
 .highlight {
   background-color: #efefef;
   padding: 7px 7px 7px 10px;
