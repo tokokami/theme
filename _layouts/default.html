@@ -8,21 +8,6 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-    {% if page.layout == "blogpost" %}
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button>
-{% endif %}
-    {% if page.layout == "post" %}
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button>
-{% endif %}
-    {% if page.layout == "page" %}
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
-  <i class="material-icons">arrow_back</i>
-</button>
-{% endif %}
   {% if page.layout == "default" %}
           <span class="mdl-layout-title">{{ site.name }}</span>
 {% endif %}
@@ -44,6 +29,28 @@ shopping_cart
             <li class="mdl-menu__item">Legal information</li>
           </ul>
         </div>
+    {% if page.layout == "blogpost" %}
+<div class="back-page">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button></div>
+{% endif %}
+    {% if page.layout == "post" %}
+<div class="back-page">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button>
+<span class="mdl-chip" style="vertical-align: middle;float: right;">
+    <span class="mdl-chip__text" style="font-weight:bold;">
+    IDR {{ page.price }}</span>
+</span></div>
+{% endif %}
+    {% if page.layout == "page" %}
+<div class="back-page">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-color-text--white" onclick="history.back();">
+  <i class="material-icons">arrow_back</i>
+</button></div>
+{% endif %}
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
