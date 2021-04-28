@@ -42,11 +42,17 @@ collections:
 
     - name: "blog"
       label: "Blog Data"
-      folder: "_data"
-      widget: "list"
-      fields:
-         - { label: Name, name: title, widget: string, required: true }
-         - { label: Deskripsi, name: deskripsi, widget: string, required: true }
-         - { label: Image, name: image, widget: image, required: true}
-         - { label: Link, name: url, widget: string, required: true }
+      files:
+       - file: _data/blog.yml
+         label: Blog Data
+         name: blog
+         fields:
+          - label: Data
+            name: blog
+            widget: "list"
+            fields:
+                 - { label: Name, name: title, widget: string, required: true }
+                 - { label: Deskripsi, name: deskripsi, widget: string, required: true }
+                 - { label: Image, name: image, widget: image, required: true}
+                 - { label: Link, name: url, widget: string, required: true }
 
