@@ -162,6 +162,12 @@ html, body {
   max-width: 1080px;
 }
 
+@media screen and (max-width: 640px) {
+  .demo-content {
+    display: block;
+  }
+}
+
 .flex {
   max-width: 1080px;
   display: flex;
@@ -544,6 +550,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 .back-page {
   margin: 10px 10px;
+  padding: 0 40px;
   vertical-align: middle;
   position: -webkit-sticky;
   position: sticky;
@@ -554,6 +561,7 @@ _:-ms-input-placeholder, :root .demo-graph {
   .back-page {
     width: auto !important;
     margin: 5px 10px;
+    padding: 0;
   }
 }
 

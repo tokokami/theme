@@ -102,6 +102,10 @@ html, body {
 }
 .demo-content {
   max-width: 1080px;
+
+    @include mobile {
+    display: block;
+    }
     }
 
 .flex {
@@ -412,6 +416,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .back-page {
     margin: 10px 10px;
+    padding: 0 40px;
     vertical-align: middle;
     position: -webkit-sticky;
     position: sticky;
@@ -420,6 +425,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     @include mobile {
     width:auto!important;
     margin: 5px 10px;
+    padding: 0;
     }
 }
 .menu-jumlah-produk {display: table;width: 100%;}

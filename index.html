@@ -1,28 +1,6 @@
 ---
 layout: default
 ---
-
-
-      <div class="archive-group">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Terbaru</span>
-</span></div>
-<div class="flex">
-  {% for post in paginator.posts %}
-<a href="{{ site.baseurl }}{{ post.url }}">
-<div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('{{ post.image }}') center / cover;">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions">
-    <span class="demo-card-image__judul">{{ post.title }}</span>
-  </div>
-  <div class="mdl-card__actions">
-    <span class="demo-card-image__tags">
-    <span class="demo-card-image__price">Rp. {{ post.price }}</span>
-    <span class="star">
-<span class="material-icons" style="font-size:16px;color:#ece708;">{{ post.star }}</span> {{ post.rate }}</span>
-</span>
-  </div>
-</div>
-</a>
-  {% endfor %}
-</div>
+    
+    {% include slick-slide.html %}
+    {% include categories.html %}

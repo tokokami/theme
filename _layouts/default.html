@@ -24,7 +24,6 @@ shopping_cart
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">About</li>
             <li class="mdl-menu__item">Contact</li>
             <li class="mdl-menu__item">Legal information</li>
           </ul>
@@ -60,13 +59,7 @@ shopping_cart
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
 <div class="mdl-grid demo-content">
-  {% if page.layout == "default" %}
-    {% include slick-slide.html %}
-  {% endif %}
       {{ content }}
-  {% if page.layout == "default" %}
-    {% include categories.html %}
-  {% endif %}
 </div>
       </main>
     </div>
@@ -75,7 +68,6 @@ shopping_cart
       <a href="http://fumacrom.com/5BQy" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a>
   {% endif %}
 
-    <script src="{{ site.baseurl }}/js/tes.js" type="text/javascript"></script>
     <script src="{{ site.baseurl }}/js/script.js" type="text/javascript"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/slick/slick.min.js"></script>
   <script type="text/javascript">

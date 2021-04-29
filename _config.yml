@@ -42,6 +42,10 @@ kramdown:
 sass:
   style: :expanded
 
+collections:
+  blogs:
+    output: true
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed
