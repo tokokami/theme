@@ -13,13 +13,12 @@ layout: post
 rC: 55
 star: star
 title: Judul Produk Kelima
-tags: []
+tags: [Terbaru]
 image: https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef
 warna:
   - Marun
   - Hitam
   - Coksu
-  - Hitam
   - Navi
   - Pink
 diskon: "15.000"

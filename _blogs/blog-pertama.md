@@ -2,6 +2,7 @@
 layout: blogpost
 title: Belum Ada
 image: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+deskripsi: tseestsyiak
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt mi ut rutrum hendrerit. Nulla auctor nisl quam, vel interdum nisi cursus a. Sed interdum tortor felis, eu pellentesque orci tincidunt ut. Praesent tempus molestie lacus, a cursus erat malesuada ut. Duis tincidunt justo purus, molestie consectetur sem tempus non. Sed id urna vel est vestibulum laoreet. Nam vitae pharetra magna. Vestibulum ac quam fringilla, porta metus sit amet, commodo tellus. Aenean auctor erat eget ex mattis, id mollis risus egestas. In at mauris velit. Fusce cursus lacus felis, non pulvinar sem tempor vitae.
