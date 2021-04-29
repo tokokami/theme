@@ -13,22 +13,22 @@ function WhatsApp() {
 			var ph = '';
 			if ($('#whatsapp .nama').val() == '') {
 				ph = $('#whatsapp .nama').attr('placeholder');
-				alert(ph + ' Wajib Diisi');
+				alert(ph + ' Wajib Dicantumkan');
 				$('#whatsapp .nama').focus();
 				return false;
 			} else if ($('#whatsapp .alamat').val() == '') {
 				ph = $('#whatsapp .alamat').attr('placeholder');
-				alert(ph + ' Mohon Diisi');
+				alert(ph + ' Mohon Diisi Sesuai Lokasi Pengiriman');
 				$('#whatsapp .alamat').focus();
                 return false;
             } else if ($('#whatsapp .nomor').val() == '') {
                 ph = $('#whatsapp .nomor').attr('placeholder');
-                alert(ph + ' Harus Terisi');
+                alert(ph + ' Harus Tercantum');
                 $('#whatsapp .nomor').focus();
 				return false;
             } else if ($('#whatsapp .qty').val() == '') {
                 ph = $('#whatsapp .qty').attr('placeholder');
-                alert('Jumlah Item Yang Di Beli Minimal ' + ph + ' pcs');
+                alert('Jumlah Item Tidak Boleh ' + ph + ' pcs');
                 $('#whatsapp .qty').focus();
 				return false;
             } else if ($('#whatsapp .bayar').val() == '') {

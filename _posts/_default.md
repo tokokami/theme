@@ -28,9 +28,3 @@ warna:
 diskon: "15.000"
 stok: 20
 ---
-<h3 style="font-size: revert;padding-bottom: 10px;">Detail Produk:</h3>
-<ul>
-<li>Deskripsi 1</li>
-<li>Deskripsi 2</li>
-<li>Deskripsi 3</li>
-</ul>
