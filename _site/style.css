@@ -523,12 +523,12 @@ _:-ms-input-placeholder, :root .demo-graph {
 .post-order {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   grid-gap: 15px;
   width: 100%;
   background: #0000001f;
   border-radius: 5px;
-  padding: 5px;
+  padding: 15px 35px;
   margin-top: 5px;
 }
 
@@ -563,6 +563,42 @@ _:-ms-input-placeholder, :root .demo-graph {
     margin: 5px 10px;
     padding: 0;
   }
+}
+
+.plus-minus-input {
+  align-items: center;
+  display: flex;
+  margin: 20px 0;
+  grid-gap: 10px;
+}
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  width: 50px;
+  border: none;
+  font-size: 17px;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.plus-minus-input .input-group-button .circle {
+  border-radius: 50%;
+  padding: 3px;
+  background: none;
+  border: none;
+}
+
+.plus-minus-input .input-group-button .fa-minus:before, .plus-minus-input .input-group-button .fa-plus:before {
+  font-size: 12px !important;
+}
+
+.fa-cart-plus:before {
+  content: "\f217";
+  font-size: 24px !important;
 }
 
 .menu-jumlah-produk {
