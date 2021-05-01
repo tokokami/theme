@@ -505,6 +505,10 @@ _:-ms-input-placeholder, :root .demo-graph {
   }
 }
 
+.wrn {
+  margin-top: 15px;
+}
+
 .selik img {
   width: -webkit-fill-available;
   border-radius: 5px !important;
@@ -568,16 +572,21 @@ _:-ms-input-placeholder, :root .demo-graph {
 .plus-minus-input {
   align-items: center;
   display: flex;
-  margin: 20px 0;
+  margin-top: 5px;
+  padding: 0 10px;
   grid-gap: 10px;
+  border: 1px solid;
+  width: 100%;
+  border-radius: 25px;
 }
 
 .plus-minus-input .input-group-field {
   text-align: center;
   padding: 0.5rem 1rem;
-  width: 50px;
+  width: 100%;
   border: none;
   font-size: 17px;
+  background-color: transparent;
 }
 
 .plus-minus-input .input-group-field::-webkit-inner-spin-button,
@@ -590,10 +599,12 @@ _:-ms-input-placeholder, :root .demo-graph {
   padding: 3px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
-.plus-minus-input .input-group-button .fa-minus:before, .plus-minus-input .input-group-button .fa-plus:before {
-  font-size: 12px !important;
+.plus-minus-input .input-group-button .fa-minus-circle:before, .plus-minus-input .input-group-button .fa-plus-circle:before {
+  font-size: 18px !important;
+  color: #424242eb;
 }
 
 .fa-cart-plus:before {

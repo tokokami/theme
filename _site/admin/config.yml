@@ -4,31 +4,6 @@ backend:
 
 media_folder: "images/uploads" 
 
-collections: 
-  - name: "post" 
-    label: "Post Product" 
-    folder: "_posts" 
-    sort: "date:desc" 
-    create: true 
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: 
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Categories", name: "tags", widget: "string", required: false}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1", required: true}
-      - {label: Image, name: image, widget: image, required: true}
-      - {label: Image, name: img, widget: image, required: true}
-      - {label: Price, name: price, widget: number, required: true}
-      - {label: Diskon, name: diskon, widget: number, required: false}
-      - {label: Warna, name: warna, widget: string, required: true}
-      - {label: Model, name: model, widget: string, required: true}
-      - {label: Stok, name: stok, widget: number, required: true}
-      - {label: Rate, name: rate, widget: number, required: true}
-      - {label: RC, name: rC, widget: number, required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: true}
-
-    meta: 
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
-
   - name: "blog" 
     label: "Blog Post" 
     folder: "_blogs"

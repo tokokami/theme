@@ -1,9 +1,9 @@
 
-name: TokoKami
+name: Plus62 Bordir
 
-description: Totokoan Terkini
+description: Produk & Jasa Bordir Manual Tasikmalaya
 
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://1.bp.blogspot.com/-NOimlNqbZsM/YItBWneOBpI/AAAAAAAAHPY/YZs3E0qfpPMG2eSF4eVad-LjB9sF1RX2ACLcBGAsYHQ/s500/thumb.png
 
 footer-links:
   dribbble:
@@ -21,10 +21,10 @@ footer-links:
   googleplus: 
 
 disqus:
-
+appID: 437300347340287
 google_analytics:
 
-url: "https://tokokami.github.io"
+url: "https://plus62bordir.github.io"
 
 baseurl: ""
 

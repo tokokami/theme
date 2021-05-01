@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<style>
+.info {
+    font-size: 12px;
+    color: crimson;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background: #eee;
+    padding: 3px;
+}
+</style>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text" style="padding-bottom:0px;">
   <h2>{{ page.title }}</h2></div>
@@ -33,29 +43,6 @@ layout: default
 <!--=== HTML Pilihan Pembayaran ===-->
 <input class='tujuan' id='Admin' type='hidden'/>
 
-<!--=== From Jumlah Item ===-->
-<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
-<div class="input-group plus-minus-input">
-
- <i class='fa fa-cart-plus'></i>
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
-      <i class="fa fa-minus" aria-hidden="true"></i>
-    </button>
-  </div>
-  <input class="input-group-field qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-
-
-<!--<label class='mdl-textfield mdl-js-textfield'>
-<input type='number' value='1' min='1' class='mdl-textfield-qty qty wajib' placeholder='0' onkeypress='return hanyaAngka(event)' style="border:none;background: white;"/>
-</label>-->
-
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
 <div class="post-order mdl-color-text--grey-700">
@@ -67,10 +54,26 @@ layout: default
 </label></div>
             {% endfor %}
   </div>
+
+<!--=== From Jumlah Item ===-->
+<div class="wrn">Jumlah:</div>
+<div class="input-group plus-minus-input">
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
+      <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+  <input class="input-group-field qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
+      <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
 <div class="wrn" style="margin-top:10px;">Model Tali:</div>
 <div class="post-pick">
 <label class='formWhatsApp'>
-<select class='mdl-button tali wajib' placeholder='Model' style="border:none;background: white;width:100%;">
+<select class='mdl-button tali wajib' placeholder='Model' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
 <optgroup label='Pilih Model Tali'>
             {% for tali in page.model %}
@@ -84,7 +87,7 @@ layout: default
   <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal">Beli</button></div>
   <dialog class="mdl-dialog">
     <div class="mdl-dialog__content">
-<small>Lengkapi Data Berikut:</small>
+<span class="info"><i class="fa fa-info" style="font-size:8px;"></i> Lengkapi Data Berikut</span>
 <!--=== HTML Table Form Pesanan ===-->
 <div class='gridWhatsApp'>
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
@@ -105,7 +108,7 @@ layout: default
 </label>
 <div class="wrn" style="margin-top:10px;">Pengiriman:</div>
 <label class='formWhatsApp'>
-<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:none;background: white;width:100%;">
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:1px solid;background:white;color:currentColor;width:100%;">
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
 <optgroup label='Kirim Pakai?'>
 <option value='J%26T Express'>J&T Express</option>
@@ -117,7 +120,7 @@ layout: default
 </label>
 <div class="wrn" style="margin-top:10px;">Pembayaran:</div>
 <label class='formWhatsApp'>
-<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:none;background: white;width: 100%;">
+<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:1px solid;background:white;color:currentColor;width:100%;">
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
 <!--=== HTML Data Pembayaran ===-->
 <optgroup label='Pilih Pembayaran'>
@@ -142,12 +145,3 @@ layout: default
   </div>
 </div>
 </article>
-<script>
-function hanyaAngka(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-    return false;
-    return true;
-}
-</script>
