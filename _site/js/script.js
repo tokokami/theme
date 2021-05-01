@@ -80,6 +80,7 @@ function WhatsApp() {
                '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _%0A' +
                ' %0A%2ABayar Via%2A: ' + bayar + '%0A' +
                '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _%0A' +
+               '%2APengiriman ke...%2A%0A' +
                ' %0A%2ANama%2A: ' + nama + 
                ' %0A%2ANo. WhatsApp%2A: ' + nomor +
                ' %0A%2AAlamat%2A: ' + alamat + '%0A' + 
