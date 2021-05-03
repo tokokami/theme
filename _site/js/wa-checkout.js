@@ -3,7 +3,7 @@ $('#Admin').val('0813-8626-7897');
 $('.whatsapp-btn').click(function () {
 $('#whatsapp').toggleClass('toggle');});
 
-		$('#whatsapp .submit').click(WhatsApp);
+		$('#whatsapp .kirim').click(WhatsApp);
 		$("#whatsapp input, #whatsapp textarea").keypress(function () {
 			if (event.which == 13) WhatsApp();
 		});
@@ -63,7 +63,7 @@ function WhatsApp() {
 					url_wa = 'whatsapp://send/';
 				}
 				// Get Value
-				var tujuan = $('#whatsapp .tujuan').val(),
+				var order = $('#whatsapp .order').val(),
 					via_url = location.href,
                     bayar =$('#whatsapp .bayar').val(),
 		            nama = $('#whatsapp .nama').val(),
@@ -74,7 +74,7 @@ function WhatsApp() {
                     tali = $('#whatsapp .tali').val(),
                     note = $('#whatsapp .note').val(),
 		            informasi = $('#whatsapp .informasi').val();
-				$(this).attr('href', url_wa + '?phone=62 ' + tujuan + '&text=' +
+				$(this).attr('href', url_wa + '?phone=62 ' + order + '&text=' +
 
                '%2AHallo kak, saya mau order produk ini...%2A%0A' +
                '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _%0A' +

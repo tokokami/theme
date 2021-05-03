@@ -4,9 +4,6 @@
 - title: Blog
   icon: rss_feed
   url: /blog
-- title: Product
-  icon: all_inbox
-  url: /product
 - title: Promo
   icon: local_offer
   url: /promo

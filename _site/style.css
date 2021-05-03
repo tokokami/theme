@@ -63,9 +63,14 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+.display-none {
+  display: none;
+}
+
 .demo-avatar {
   width: 100%;
   height: auto;
+  border-radius: 0px !important;
 }
 
 .demo-layout .mdl-layout__header .mdl-layout__drawer-button {
@@ -319,7 +324,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 .demo-card-image.mdl-card {
   width: 256px;
-  min-width: 163px;
+  min-width: 159px;
   height: 256px;
   margin: 5px;
 }
@@ -327,7 +332,6 @@ _:-ms-input-placeholder, :root .demo-graph {
 @media screen and (max-width: 640px) {
   .demo-card-image.mdl-card {
     width: auto;
-    margin: 5px;
   }
 }
 
@@ -440,6 +444,16 @@ _:-ms-input-placeholder, :root .demo-graph {
   }
 }
 
+.grid-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 5px;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
 .content-produk {
   display: flex;
   flex-wrap: nowrap;
@@ -515,9 +529,11 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 
 .tombol-beli {
-  margin-top: 55px;
-  margin-right: 15px;
-  float: right;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  grid-gap: 31px;
+  margin: 25px auto;
 }
 
 .post-tab {

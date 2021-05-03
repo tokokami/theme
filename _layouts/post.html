@@ -10,11 +10,15 @@ layout: default
     background: #eee;
     padding: 3px;
 }
+.jum {
+    margin-top: 55px;
+}
 </style>
-<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col simpleCart_shelfItem">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text" style="padding-bottom:0px;">
-  <h2>{{ page.title }}</h2></div>
+  <h2 class="item_name">{{ page.title }}</h2></div>
 <div class="content-produk">
+<span class="display-none item_price">{{page.price}}</span>
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-text posting-img">
 <div class="productPhoto">
             {% for image in page.img %}
@@ -22,7 +26,7 @@ layout: default
           	{% endfor %}
 </div>
 <div class="image-produk">
-<img src="{{ page.image }}"/>
+<img class="item_thumb" src="{{ page.image }}"/>
 </div></div>
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -41,39 +45,24 @@ layout: default
 <!--=== HTML Form WhatsApp  ===-->
 <div class='data-form validate-form' id='whatsapp'>
 <!--=== HTML Pilihan Pembayaran ===-->
-<input class='tujuan' id='Admin' type='hidden'/>
+<input class='order' id='Admin' type='hidden'/>
 
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
-<div class="post-order mdl-color-text--grey-700">
+<label class='formWhatsApp'>
+<select class='mdl-button item_color warna wajib' placeholder='Warna' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
+<optgroup label='Pilih Warna'>
             {% for warna in page.warna %}
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="{{ warna }}">
-  <input type="radio" id="{{ warna }}" class="mdl-radio__button warna" value="{{ warna }}" name="options">
-  <span class="mdl-radio__label">{{ warna }}</span>
-</label></div>
+<option value='{{ warna }}'>{{ warna }}</option>
             {% endfor %}
-  </div>
-
-<!--=== From Jumlah Item ===-->
-<div class="wrn">Jumlah:</div>
-<div class="input-group plus-minus-input">
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
-      <i class="fa fa-minus-circle" aria-hidden="true"></i>
-    </button>
-  </div>
-  <input class="input-group-field qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
-      <i class="fa fa-plus-circle" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
+</optgroup>
+</select>
+</label>
 <div class="wrn" style="margin-top:10px;">Model Tali:</div>
 <div class="post-pick">
 <label class='formWhatsApp'>
-<select class='mdl-button tali wajib' placeholder='Model' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
+<select class='mdl-button item_tali tali wajib' placeholder='Model' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
 <optgroup label='Pilih Model Tali'>
             {% for tali in page.model %}
@@ -83,8 +72,25 @@ layout: default
 </select>
 </label>
 </div>
+<!--=== From Jumlah Item ===-->
+<div class="jum">
+<div class="wrn">Jumlah:</div>
+<div class="input-group plus-minus-input">
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
+      <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+  <input class="input-group-field item_Quantity qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
+      <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+</div></div>
 <div class="tombol-beli">
-  <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal">Beli</button></div>
+  <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal"><span class="material-icons">done_all</span> Beli Langsung</button>
+  <button type="button" class="item_add mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><span class="material-icons">add_shopping_cart</span> Masuk Keranjang</button></div>
   <dialog class="mdl-dialog">
     <div class="mdl-dialog__content">
 <span class="info"><i class="fa fa-info" style="font-size:8px;"></i> Lengkapi Data Berikut</span>
@@ -92,7 +98,7 @@ layout: default
 <div class='gridWhatsApp'>
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nama ===-->
-<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu' type='text'/>
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Lengkap' type='text'/>
 </label>
 <label class='item'>
 <!--=== From Alamat ===-->
@@ -133,15 +139,28 @@ layout: default
 </div>
     </div>
     <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content:space-between!important;;padding: 8px 0!important;">
-      <a type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</a>
-      <button type="button" class="mdl-button close">Tutup</button>
+      <a type="button" class="whatsapp-btn mdl-button sendWAclik kirim">Lanjut</a>
+      <button type="button" class="mdl-button close" onclick="history.back();">Tutup</button>
     </div>
   </dialog>
                   </div>
               </div>
-<div class="keterangan" style="margin-top:10px;font-size:small;color:red;border:1px solid;padding:30px;">Untuk Pemesanan Warna Dan Jenis Tali berbeda Silahkan tambahkan di catatan.</div>
           </div>
       </div>
   </div>
 </div>
 </article>
+
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>

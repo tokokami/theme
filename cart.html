@@ -1,43 +1,17 @@
 ---
-layout: page
+layout: cart-page
 title: Keranjang Belanja Anda
 permalink: /cart
 ---
-
         <div class="cart">
             <div class="row">
                 <div class="medium-6 columns">
-                    <button class="tiny secondary" id="clear">Clear the cart</button>
-                </div>
-                <div class="medium-6 columns">
-                    <button class="tiny disabled" title="Work in progress">Checkout</button>
-                </div>
-            </div>
-            <div id="cartItems">Loading cart...</div>
-            Total price: <strong id="totalPrice">0 $</strong>
-        </div>
-<script type="text/template" id="cartT">
-  <% _.each(items, function (item) { %>
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Nama Produk</th>
-      <th>Warna</th>
-      <th>Model</th>
-      <th>Jumlah</th>
-      <th>Total Harga</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric"><%= item.produk %></td>
-      <td><%= item.warna %></td>
-      <td><%= item.model %></td>
-      <td><%= item.count %> pcs</td>
-      <td><%= item.total %></td>
-    </tr>
-  </tbody>
-</table>
-<% }); %>
-</script>
-
+  <div class="keranjang-box simplecart-cart">
+    <div class="simpleCart_items"></div>
+    <div class="harga-total">
+      <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
+          <a class="co-btn item_add show-modal">CheckOut</a><br />
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
+</div>
+</div>
+</div>

@@ -1,7 +1,7 @@
 ---
-title: Judul Produk Kelima
-tags: [Terbaru]
 layout: post
+title: Judul Produk Pertama
+tags: [Terlaris, Terbaru]
 image: https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef
 img:
   - https://cf.shopee.co.id/file/74530543685ec9d3fba71596bc7b62d0
@@ -12,8 +12,9 @@ price: "20.000"
 diskon: "15.000"
 stok: 20
 model:
-  - Headloop
-  - Earloop
+- Headloop
+- Earloop
+- Tali ikat
 warna:
 - Ungu
 - Marun
@@ -28,3 +29,21 @@ rate: 5
 rC: 55
 star: star
 ---
+
+
+
+
+<b>Detail Produk:</b>
+<ul>
+<li>Bahan Kain : 100% Katun</li>
+<li>Lapisan : 3 Lapisan</li>
+<li>Bordir : Manual ( JUKI )</li>
+</ul>
+<p />
+<b>Warna Tersedia:</b>
+<br />
+<span>Hitam, Coksu, Abu, Marun, Mustrad</span>
+<p />
+<b>Jenis Tali:</b>
+<br />
+<span>HeadLoop, EarLoop, Tali Ikat</span>

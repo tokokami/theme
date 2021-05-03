@@ -3,7 +3,7 @@ name: Plus62 Bordir
 
 description: Produk & Jasa Bordir Manual Tasikmalaya
 
-avatar: https://1.bp.blogspot.com/-NOimlNqbZsM/YItBWneOBpI/AAAAAAAAHPY/YZs3E0qfpPMG2eSF4eVad-LjB9sF1RX2ACLcBGAsYHQ/s500/thumb.png
+avatar: /images/thumb.png
 
 footer-links:
   dribbble:
@@ -24,7 +24,7 @@ disqus:
 appID: 437300347340287
 google_analytics:
 
-url: "https://tokokami.github.io"
+url: ""
 
 baseurl: ""
 

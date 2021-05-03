@@ -1,1 +1,1 @@
-Sitemap: https://plus62bordir.github.io/sitemap.xml
+Sitemap: /sitemap.xml

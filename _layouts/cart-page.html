@@ -1,0 +1,162 @@
+---
+layout: default
+---
+
+<style>
+svg:not(:root) {
+    overflow: hidden;
+    width: 20px;
+}
+.keranjang-box {
+    background-color: #fff;
+    border-radius: .5rem;
+    max-height: calc(100vh - 150px);
+    overflow: hidden;
+    margin: auto;
+}
+.blibli-background-transparent-box {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.empty-cart {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.item_Quantity { border:none;text-align:center;width:19%;}
+.keranjang-box .simpleCart_items {
+    max-height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 12px;
+}
+.keranjang-box .itemRow {
+    overflow: hidden;
+    line-height: 1.5;
+    width: calc(100% - 0px);
+    font-weight: 700;
+    font-size: 12px;
+    background: #f7f8f9;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.keranjang-box .item-decrement, .item-quantity, .keranjang-box .item-increment {
+    font-size: 12px;
+    display: table-cell;
+}
+.keranjang-box .item-color {
+    margin-top: 3px;
+}
+.keranjang-box .item-model {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.keranjang-box .headerRow, .keranjang-box .item-price, .keranjang-box .item-berat, .keranjang-box .item-link {
+    display: none;
+}
+.keranjang-box .item-total {
+    color: #ff5722;
+    font-weight: 600;
+    font-size: 14px;
+}
+.keranjang-box .item-remove, .simpleCart_items .item-remove {
+    float: right;
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    background: #0000001a;
+    border-radius: 50%;
+}
+.keranjang-box .item-thumb {
+    float: left;
+}
+.keranjang-box .item-name {
+    float: left;
+    width: calc(100% - 90px);
+    font-size: 14px;
+    display: inline-block;
+}
+.keranjang-box .item-quantity {
+    padding: 0 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.keranjang-box .simpleCart_increment {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    text-indent: -9999px;
+    background: url('https://api.iconify.design/ic:sharp-add-circle-outline.svg') no-repeat center center / contain;
+    border-radius: 50%;
+} .keranjang-box .simpleCart_decrement {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    text-indent: -9999px;
+    background: url('https://api.iconify.design/ic:round-remove-circle-outline.svg') no-repeat center center / contain;
+    border-radius: 50%;
+}
+.keranjang-box .item-remove a.simpleCart_remove, .simpleCart_items .item-remove a.simpleCart_remove {
+    display: block;
+    background: url('https://api.iconify.design/ic:baseline-remove-shopping-cart.svg') no-repeat center center / contain;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    background-size: 20px;
+}
+.keranjang-box .harga-total {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid crimson;
+    width: auto;
+    background: crimson;
+    color: antiquewhite;
+    display: none;
+}
+.keranjang-box .item-thumb img {
+    width: 100px;
+    height: 100px;
+    border-radius: .3rem;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.co-btn {
+    float: right;
+    color: #eee;
+    border: 1px;
+    background: cornflowerblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+</style>
+
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+  <h1>{{ page.title }}</h1></div>
+
+  <div class="mdl-card__supporting-text" style="width: 100%!important;text-align: justify;">
+    {{ content }}
+  </div>
+</article>

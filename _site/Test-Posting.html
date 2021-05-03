@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Produk & Jasa Bordir Manual Tasikmalaya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Plus62 Bordir – Judul Produk Kelima</title>
+    <title>Plus62 Bordir – Judul Produk Pertama</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -193,10 +193,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     position: relative;
-    padding: 0 6px;
+    padding-right: 8px;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 25%;
+    width: 24%;
+    height: fit-content;
     justify-content: space-evenly;
 }
 .image-produk {
@@ -223,8 +224,8 @@ img {
     "ratingCount": "55",
     "ratingValue": "5"
   },
-  "image": "https://1.bp.blogspot.com/-NOimlNqbZsM/YItBWneOBpI/AAAAAAAAHPY/YZs3E0qfpPMG2eSF4eVad-LjB9sF1RX2ACLcBGAsYHQ/s500/thumb.png",
-  "name": "Judul Produk Kelima",
+  "image": "https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef",
+  "name": "Judul Produk Pertama",
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "IDR",
@@ -234,11 +235,11 @@ img {
     "offers": [
       {
         "@type": "Offer",
-        "url": "https://plus62bordir.github.io/Hello-World"
+        "url": "/Test-Posting"
       },
       {
         "@type": "Offer",
-        "url": "https://plus62bordir.github.io/Hello-World"
+        "url": "/Test-Posting"
       }
     ]
   }
@@ -258,11 +259,9 @@ img {
   
   
           <div class="mdl-layout-spacer"></div>
-<a href="/keranjang">
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">
-shopping_cart
-</span>
-          </button></a>
+<a id="cart-menu" class=" cart" href="/cart">
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">shopping_cart</span></button></a>
+<span class="simpleCart_quantity mdl-color-text--white" style="display: inline-flex;max-width: 17.47px;max-height: 17.47px;background:crimson;color:#f2f2f2;border-radius: 50%;padding:5px;vertical-align:middle;align-content:center;justify-content: center;align-items: center;font-size:small;font-weight:bolder;margin-top:-20px;margin-left:-10px;"></span>
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
           </button>
@@ -278,7 +277,7 @@ shopping_cart
   <i class="material-icons">arrow_back</i>
 </button>
 <span class="mdl-chip" style="vertical-align: middle;float: right;">
-    <span class="mdl-chip__text" style="font-weight:bold;">
+    <span class="mdl-chip__text item_price" style="font-weight:bold;">
     IDR 20.000</span>
 </span></div>
 
@@ -286,7 +285,7 @@ shopping_cart
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
-          <img src="https://1.bp.blogspot.com/-NOimlNqbZsM/YItBWneOBpI/AAAAAAAAHPY/YZs3E0qfpPMG2eSF4eVad-LjB9sF1RX2ACLcBGAsYHQ/s500/thumb.png" class="demo-avatar">
+          <img src="/images/thumb.png" class="demo-avatar">
         </header>
     
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
@@ -294,8 +293,6 @@ shopping_cart
           <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">storefront</i>Store</a>
           
           <a class="mdl-navigation__link" href="/blog"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">rss_feed</i>Blog</a>
-          
-          <a class="mdl-navigation__link" href="/product"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">all_inbox</i>Product</a>
           
           <a class="mdl-navigation__link" href="/promo"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promo</a>
           
@@ -319,25 +316,29 @@ shopping_cart
     background: #eee;
     padding: 3px;
 }
+.jum {
+    margin-top: 55px;
+}
 </style>
-<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col simpleCart_shelfItem">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text" style="padding-bottom:0px;">
-  <h2>Judul Produk Kelima</h2></div>
+  <h2 class="item_name">Judul Produk Pertama</h2></div>
 <div class="content-produk">
+<span class="display-none item_price">20.000</span>
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-text posting-img">
 <div class="productPhoto">
             
-<img src="https://1.bp.blogspot.com/-DSAPR6mXOhQ/YItBVcss36I/AAAAAAAAHPI/2wARF8kRX40-Mi5Z0bpcKuehyx9b81NTQCLcBGAsYHQ/s500/biru.png"/>
+<img src="https://cf.shopee.co.id/file/74530543685ec9d3fba71596bc7b62d0"/>
           	
-<img src="https://1.bp.blogspot.com/-ESERibQw3y8/YItBVZd3FAI/AAAAAAAAHPM/OENFeXc8p2s4aUzXf5xeMdzk7IkpINm0wCLcBGAsYHQ/s500/hijau.png"/>
+<img src="https://cf.shopee.co.id/file/23b3e8f5ac4ef1439a69ee852c6ccfe6"/>
           	
-<img src="https://1.bp.blogspot.com/-a-o-RQTdJGQ/YItBVv_s1LI/AAAAAAAAHPQ/h1eaAIxDrYQfLy6gqGKdIojIOL2WNcYjACLcBGAsYHQ/s500/kuning.png"/>
+<img src="https://cf.shopee.co.id/file/24200fe4753c8a5cb75d1ef3e1458f08"/>
           	
-<img src="https://1.bp.blogspot.com/-JplE8aJCTGA/YItBWUzQovI/AAAAAAAAHPU/NIxQDuO9wAQc6pZt-Br26t1m9ro0t6wowCLcBGAsYHQ/s500/merah.png"/>
+<img src="https://cf.shopee.co.id/file/d78fe06d94f7f92cfae0505266a78186"/>
           	
 </div>
 <div class="image-produk">
-<img src="https://1.bp.blogspot.com/-NOimlNqbZsM/YItBWneOBpI/AAAAAAAAHPY/YZs3E0qfpPMG2eSF4eVad-LjB9sF1RX2ACLcBGAsYHQ/s500/thumb.png"/>
+<img class="item_thumb" src="https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef"/>
 </div></div>
   <div class="post mdl-color-text--grey-700 mdl-card__supporting-form">
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -348,12 +349,22 @@ shopping_cart
 
   <div class="mdl-tabs__panel is-active" id="deskripsi-panel">
 <div class="post-tab mdl-color-text--grey-700">
-    <h3 style="font-size: revert;padding-bottom: 10px;">Detail Produk:</h3>
+    <p><b>Detail Produk:</b></p>
 <ul>
-<li>Deskripsi 1</li>
-<li>Deskripsi 2</li>
-<li>Deskripsi 3</li>
+<li>Bahan Kain : 100% Katun</li>
+<li>Lapisan : 3 Lapisan</li>
+<li>Bordir : Manual ( JUKI )</li>
 </ul>
+<p />
+
+<p><b>Warna Tersedia:</b>
+<br />
+<span>Hitam, Coksu, Abu, Marun, Mustrad</span></p>
+<p />
+
+<p><b>Jenis Tali:</b>
+<br />
+<span>HeadLoop, EarLoop, Tali Ikat</span></p>
 
 </div>
   </div>
@@ -362,87 +373,40 @@ shopping_cart
 <!--=== HTML Form WhatsApp  ===-->
 <div class='data-form validate-form' id='whatsapp'>
 <!--=== HTML Pilihan Pembayaran ===-->
-<input class='tujuan' id='Admin' type='hidden'/>
+<input class='order' id='Admin' type='hidden'/>
 
 <!--=== HTML Opsi Form Produk ===-->
 <div class="wrn">Pilih Warna:</div>
-<div class="post-order mdl-color-text--grey-700">
+<label class='formWhatsApp'>
+<select class='mdl-button item_color warna wajib' placeholder='Warna' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
+<optgroup label='Pilih Warna'>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Ungu">
-  <input type="radio" id="Ungu" class="mdl-radio__button warna" value="Ungu" name="options">
-  <span class="mdl-radio__label">Ungu</span>
-</label></div>
+<option value='Ungu'>Ungu</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Marun">
-  <input type="radio" id="Marun" class="mdl-radio__button warna" value="Marun" name="options">
-  <span class="mdl-radio__label">Marun</span>
-</label></div>
+<option value='Marun'>Marun</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Hitam">
-  <input type="radio" id="Hitam" class="mdl-radio__button warna" value="Hitam" name="options">
-  <span class="mdl-radio__label">Hitam</span>
-</label></div>
+<option value='Hitam'>Hitam</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Coksu">
-  <input type="radio" id="Coksu" class="mdl-radio__button warna" value="Coksu" name="options">
-  <span class="mdl-radio__label">Coksu</span>
-</label></div>
+<option value='Coksu'>Coksu</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Navi">
-  <input type="radio" id="Navi" class="mdl-radio__button warna" value="Navi" name="options">
-  <span class="mdl-radio__label">Navi</span>
-</label></div>
+<option value='Navi'>Navi</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Pink">
-  <input type="radio" id="Pink" class="mdl-radio__button warna" value="Pink" name="options">
-  <span class="mdl-radio__label">Pink</span>
-</label></div>
+<option value='Pink'>Pink</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Abu">
-  <input type="radio" id="Abu" class="mdl-radio__button warna" value="Abu" name="options">
-  <span class="mdl-radio__label">Abu</span>
-</label></div>
+<option value='Abu'>Abu</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="BirMud">
-  <input type="radio" id="BirMud" class="mdl-radio__button warna" value="BirMud" name="options">
-  <span class="mdl-radio__label">BirMud</span>
-</label></div>
+<option value='BirMud'>BirMud</option>
             
-<div class="rd" style="width: 90px;">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Cream">
-  <input type="radio" id="Cream" class="mdl-radio__button warna" value="Cream" name="options">
-  <span class="mdl-radio__label">Cream</span>
-</label></div>
+<option value='Cream'>Cream</option>
             
-  </div>
-
-<!--=== From Jumlah Item ===-->
-<div class="wrn">Jumlah:</div>
-<div class="input-group plus-minus-input">
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
-      <i class="fa fa-minus-circle" aria-hidden="true"></i>
-    </button>
-  </div>
-  <input class="input-group-field qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
-  <div class="input-group-button">
-    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
-      <i class="fa fa-plus-circle" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
+</optgroup>
+</select>
+</label>
 <div class="wrn" style="margin-top:10px;">Model Tali:</div>
 <div class="post-pick">
 <label class='formWhatsApp'>
-<select class='mdl-button tali wajib' placeholder='Model' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
+<select class='mdl-button item_tali tali wajib' placeholder='Model' style="border:1px solid;background:white;color:currentColor;width:100%;margin-top:5px;">
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
 <optgroup label='Pilih Model Tali'>
             
@@ -450,12 +414,31 @@ shopping_cart
             
 <option value='Earloop'>Earloop</option>
             
+<option value='Tali ikat'>Tali ikat</option>
+            
 </optgroup>
 </select>
 </label>
 </div>
+<!--=== From Jumlah Item ===-->
+<div class="jum">
+<div class="wrn">Jumlah:</div>
+<div class="input-group plus-minus-input">
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
+      <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+  <input class="input-group-field item_Quantity qty wajib" type="number" name="quantity" min='1' value="1" placeholder='0' disabled/>
+  <div class="input-group-button">
+    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
+      <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+</div></div>
 <div class="tombol-beli">
-  <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal">Beli</button></div>
+  <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-modal"><span class="material-icons">done_all</span> Beli Langsung</button>
+  <button type="button" class="item_add mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><span class="material-icons">add_shopping_cart</span> Masuk Keranjang</button></div>
   <dialog class="mdl-dialog">
     <div class="mdl-dialog__content">
 <span class="info"><i class="fa fa-info" style="font-size:8px;"></i> Lengkapi Data Berikut</span>
@@ -463,7 +446,7 @@ shopping_cart
 <div class='gridWhatsApp'>
 <label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
 <!--=== From Nama ===-->
-<input class='nama wajib mdl-textfield__input' placeholder='Nama Kamu' type='text'/>
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Lengkap' type='text'/>
 </label>
 <label class='item'>
 <!--=== From Alamat ===-->
@@ -504,18 +487,31 @@ shopping_cart
 </div>
     </div>
     <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content:space-between!important;;padding: 8px 0!important;">
-      <a type="button" class="whatsapp-btn mdl-button sendWAclik submit">Lanjut</a>
-      <button type="button" class="mdl-button close">Tutup</button>
+      <a type="button" class="whatsapp-btn mdl-button sendWAclik kirim">Lanjut</a>
+      <button type="button" class="mdl-button close" onclick="history.back();">Tutup</button>
     </div>
   </dialog>
                   </div>
               </div>
-<div class="keterangan" style="margin-top:10px;font-size:small;color:red;border:1px solid;padding:30px;">Untuk Pemesanan Warna Dan Jenis Tali berbeda Silahkan tambahkan di catatan.</div>
           </div>
       </div>
   </div>
 </div>
 </article>
+
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
 
 </div>
       </main>
@@ -524,7 +520,12 @@ shopping_cart
 
   
 
-  <script src="/js/script.js" type="text/javascript"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/simpleCart.js"></script>
+  <script async src="/js/main.js"></script>
+  <script src="/js/form-script.js" type="text/javascript"></script>
+  <script src="/js/wa-checkout.js" type="text/javascript"></script>
+  <script async src="/js/add-to-cart.js"></script>
   <script type="text/javascript" src="/slick/slick.min.js"></script>
   <script type="text/javascript">
 
@@ -539,19 +540,6 @@ shopping_cart
         });
   </script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script>
-    var dialog = document.querySelector('dialog');
-    var showModalButton = document.querySelector('.show-modal');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    showModalButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
-  </script>
 <script>
 jQuery(document).ready(function(){
     // This button will increment the value
@@ -565,10 +553,10 @@ jQuery(document).ready(function(){
         // If is not undefined
         if (!isNaN(currentVal)) {
             // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
+            $('input[name='+fieldName+']').val(currentVal + 0);
         } else {
             // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(1);
+            $('input[name='+fieldName+']').val(0);
         }
     });
     // This button will decrement the value till 0
@@ -582,7 +570,7 @@ jQuery(document).ready(function(){
         // If it isn't undefined or its greater than 0
         if (!isNaN(currentVal) && currentVal > 1) {
             // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
+            $('input[name='+fieldName+']').val(currentVal - 0);
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(1);

@@ -8,6 +8,7 @@ permalink: /product
 <span class="mdl-chip">
     <span class="mdl-chip__text">All Product</span>
 </span></div>
+<div class="grid-flex">
   {% for post in site.posts %}
 <a href="{{ site.baseurl }}{{ post.url }}">
 <div class="demo-card-image mdl-card mdl-shadow--2dp" style="background: url('{{ post.image }}') center / cover;">
@@ -25,3 +26,4 @@ permalink: /product
 </div>
 </a>
   {% endfor %}
+</div>
