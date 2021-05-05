@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Produk & Jasa Bordir Manual Tasikmalaya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Plus62 Bordir – All Product</title>
+    <title>Plus62 Bordir – Produk</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -84,8 +84,8 @@
 
   
           <div class="mdl-layout-spacer"></div>
-<a id="cart-menu" class=" cart" href="/cart">
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="cart"><span class="material-icons" style="color:#757575">shopping_cart</span></button></a>
+<a id="cart-menu" class="cart" href="/cart">
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><span class="material-icons" style="color:#757575">shopping_cart</span></button></a>
 <span class="simpleCart_quantity mdl-color-text--white" style="display: inline-flex;max-width: 17.47px;max-height: 17.47px;background:crimson;color:#f2f2f2;border-radius: 50%;padding:5px;vertical-align:middle;align-content:center;justify-content: center;align-items: center;font-size:small;font-weight:bolder;margin-top:-20px;margin-left:-10px;"></span>
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
@@ -125,7 +125,7 @@
 <div class="mdl-grid demo-content">
             <div class="archive-group">
 <span class="mdl-chip">
-    <span class="mdl-chip__text">All Product</span>
+    <span class="mdl-chip__text">Terbaru</span>
 </span></div>
 <div class="grid-flex">
   
@@ -192,8 +192,10 @@
   <script src="/js/simpleCart.js"></script>
   <script async src="/js/main.js"></script>
   <script src="/js/form-script.js" type="text/javascript"></script>
+  <script src="/js/form-order.js" type="text/javascript"></script>
   <script src="/js/wa-checkout.js" type="text/javascript"></script>
   <script async src="/js/add-to-cart.js"></script>
+  <script async src="/js/responsive-menu.js"></script>
   <script type="text/javascript" src="/slick/slick.min.js"></script>
   <script type="text/javascript">
 
@@ -206,6 +208,19 @@
   autoplaySpeed: 2000,
 });
         });
+  </script>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
   </script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script>

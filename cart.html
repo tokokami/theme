@@ -10,8 +10,54 @@ permalink: /cart
     <div class="simpleCart_items"></div>
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
-          <a class="co-btn item_add show-modal">CheckOut</a><br />
+          <button type="button" class="co-btn mdl-button show-modal">CheckOut</button><br />
  <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
 </div>
 </div>
+</div>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+<span class="info"><i class="fa fa-info" style="font-size:8px;"></i> Lengkapi Data Berikut</span>
+<!--=== HTML Form WhatsApp  ===-->
+<div class='data-form validate-form' id='whatsapp-order'>
+<!--=== HTML Pilihan Pembayaran ===-->
+<input class='order' id='AdminToko' type='hidden'/>
+<!--=== HTML Table Form Pesanan ===-->
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+<!--=== From Nama ===-->
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Lengkap' type='text'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='alamat wajib mdl-textfield__input mdl-textfield--floating-label' placeholder='Alamat Lengkap' type='text'></textarea>
+</label>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+<!--=== From Nomor WhatsApp ===-->
+<input type='number' class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='note mdl-textfield__input mdl-textfield--floating-label' placeholder='Catatan' type='text'></textarea>
+</label>
+<div class="wrn" style="margin-top:10px;">Pengiriman:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:1px solid;background:white;color:currentColor;width:100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
+</div>
+    <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content:space-between!important;;padding: 8px 0!important;">
+      <a type="button" href="/" class="whatsapp-btn mdl-button sendWAclik order">Lanjut</a>
+      <button type="button" class="mdl-button close" onclick="history.back();">Tutup</button>
+    </div>
+    </div>
+	</div>
+  </dialog>
 </div>

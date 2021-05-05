@@ -16,6 +16,7 @@ layout: default
 </style>
 <article class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col simpleCart_shelfItem">
 <div class="mdl-color-text--grey-700 mdl-card__supporting-text" style="padding-bottom:0px;">
+<div class="item_link display-none">{{site.baseurl}}{{page.url}}</div>
   <h2 class="item_name">{{ page.title }}</h2></div>
 <div class="content-produk">
 <span class="display-none item_price">{{page.price}}</span>
@@ -124,18 +125,6 @@ layout: default
 </optgroup>
 </select>
 </label>
-<div class="wrn" style="margin-top:10px;">Pembayaran:</div>
-<label class='formWhatsApp'>
-<select class='mdl-button bayar wajib' placeholder='Bayar' style="border:1px solid;background:white;color:currentColor;width:100%;">
-<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih</option>
-<!--=== HTML Data Pembayaran ===-->
-<optgroup label='Pilih Pembayaran'>
-<option value='BRI | 0100-01-09897550-6'>Transfer Bank BRI</option>
-<option value='BTPN | 90370011795'>Transfer Bank BTPN</option>
-<option value='Scan QRIS'>Scan QRIS</option>
-</optgroup>
-</select>
-</label>
 </div>
     </div>
     <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content:space-between!important;;padding: 8px 0!important;">
@@ -150,17 +139,3 @@ layout: default
   </div>
 </div>
 </article>
-
-  <script>
-    var dialog = document.querySelector('dialog');
-    var showModalButton = document.querySelector('.show-modal');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    showModalButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
-  </script>

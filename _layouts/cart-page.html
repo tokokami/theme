@@ -31,10 +31,10 @@ svg:not(:root) {
 }
 .item_Quantity { border:none;text-align:center;width:19%;}
 .keranjang-box .simpleCart_items {
-    max-height: 250px;
+    max-height: 280px;
     overflow: hidden;
     overflow-y: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding: 0;
     font-size: 12px;
 }
@@ -45,7 +45,7 @@ svg:not(:root) {
     font-weight: 700;
     font-size: 12px;
     background: #f7f8f9;
-    padding: 15px;
+    padding: 5px;
     border-bottom: 1px solid #ddd;
 }
 .keranjang-box .item-decrement, .item-quantity, .keranjang-box .item-increment {
@@ -68,20 +68,21 @@ svg:not(:root) {
     font-weight: 600;
     font-size: 14px;
 }
+.keranjang-box .item-totalberat {
+    display:none;
+}
 .keranjang-box .item-remove, .simpleCart_items .item-remove {
     float: right;
-    display: block;
-    position: relative;
-    margin-right: 10px;
-    background: #0000001a;
+    display: initial;
+    position: absolute;
+    right: 20px;
+    background: transparent;
     border-radius: 50%;
 }
 .keranjang-box .item-thumb {
     float: left;
 }
 .keranjang-box .item-name {
-    float: left;
-    width: calc(100% - 90px);
     font-size: 14px;
     display: inline-block;
 }
@@ -127,9 +128,11 @@ svg:not(:root) {
     padding: 0 5px;
     font-size: 14px;
     font-weight: bold;
-    border: 1px solid crimson;
+    border: 1px solid #37474f;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     width: auto;
-    background: crimson;
+    background: #37474f;
     color: antiquewhite;
     display: none;
 }
@@ -145,7 +148,6 @@ svg:not(:root) {
     color: #eee;
     border: 1px;
     background: cornflowerblue;
-    padding: 10px;
     border-radius: 5px;
     margin-top: 25px;
     margin-bottom: 0px;
